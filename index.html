@@ -183,7 +183,13 @@
       section { padding: 48px 0; }
       .brand span { font-size: 20px; }
     }
-  </style>
+    /* ™: claimed marks of SmartPalate, LLC (nothing federally registered yet, so never ®) */
+    sup.tm { font-size: .45em; vertical-align: super; margin-left: 1px; font-weight: 600; }
+    .tm-note { font-size: 11px; opacity: .6; margin: 10px 0 0; line-height: 1.4; }
+    .tm-wrap { position: relative; display: block; width: min(460px, 86vw); margin: 6px auto 0; }
+    .hero .tm-wrap .tagline { margin: 0; }
+    .tm-art { position: absolute; left: 99%; top: 16%; font-size: 12px; font-weight: 700; color: #fff8ec; z-index: 2; }
+</style>
 </head>
 <body>
   <div class="sky space">
@@ -192,7 +198,7 @@
       <header class="top">
         <a class="brand" href="/" aria-label="SmartPalate home">
           <img src="assets/logo.png" alt="" width="40" height="40">
-          <span>SmartPalate</span>
+          <span>SmartPalate<sup class="tm">&trade;</sup></span>
         </a>
         <nav class="menu" aria-label="Main">
           <a href="#about">About Us</a>
@@ -208,9 +214,9 @@
           <img class="figure" src="assets/maitre-d.png" width="978" height="908"
                alt="The SmartPalate MAÎTRE D', holding a tray with the SmartPalate logo">
         </div>
-        <h1>What'cha got a taste for!</h1>
+        <h1>What'cha got a taste for!&trade;</h1>
         <a class="tagline-link" href="https://app.smartpalate.co/request" aria-label="What'cha got a taste for! Send a request">
-          <img class="tagline" src="assets/tagline.png" width="787" height="158" alt="">
+          <span class="tm-wrap"><img class="tagline" src="assets/tagline.png" width="787" height="158" alt=""><span class="tm-art" aria-hidden="true">&trade;</span></span>
           <span class="tap">Tap to tell us</span>
         </a>
 
@@ -220,7 +226,7 @@
           <p>Requests from all 50 states are welcome. Help shape where we start.</p>
         </div>
 
-        <p class="badge">Family &amp; Veteran-owned</p>
+        <p class="badge">Veteran Owned &amp; Family Operated</p>
       </div>
     </div>
   </div>
@@ -230,7 +236,7 @@
       <div class="wrap about">
         <div>
           <p class="kicker">About Us</p>
-          <h2>Family &amp; Veteran-owned.</h2>
+          <h2>Veteran Owned &amp; Family Operated.</h2>
           <p class="intro">SmartPalate is a family business started by a veteran who spent his career in logistics, the work of getting the right supplies to the right people at the right time.</p>
         </div>
         <div class="card">
@@ -277,7 +283,7 @@
       <div class="wrap partners">
         <div>
           <p class="kicker">Growers, grocers, restaurants &amp; delivery partners</p>
-          <h2>Let producers, produce!</h2>
+          <h2>Let producers, produce!<sup class="tm">&trade;</sup></h2>
           <p class="intro">You keep doing what you do best. You stay the seller, and SmartPalate connects you with the people asking for what you have.</p>
         </div>
         <div class="card">
@@ -301,13 +307,14 @@
   <div class="sky">
     <footer class="wrap">
       <div class="row">
-        <span>© 2026 SmartPalate · <span class="slogan">Let Producers, Produce!</span></span>
+        <span>© 2026 SmartPalate, LLC · <span class="slogan">Let Producers, Produce!&trade;</span></span>
         <nav aria-label="Footer">
           <a href="https://app.smartpalate.co/legal/terms">Terms</a>
           <a href="https://app.smartpalate.co/legal/privacy">Privacy</a>
           <a href="mailto:smartpalate@yahoo.com">smartpalate@yahoo.com</a>
         </nav>
       </div>
+      <p class="tm-note">SmartPalate&trade;, the MA&Icirc;TRE D&rsquo;&trade;, &ldquo;What&rsquo;cha got a taste for?&rdquo;&trade;, &ldquo;What&rsquo;cha got?&rdquo;&trade; and &ldquo;Let Producers, Produce!&rdquo;&trade; are trademarks of SmartPalate, LLC.</p>
       <p class="credit">Earth imagery: NASA</p>
     </footer>
   </div>
