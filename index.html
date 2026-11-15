@@ -114,6 +114,22 @@
     .slogan-btn { padding: 12px 30px 10px; line-height: 0; }
     .slogan-btn img { width: 230px; height: auto; display: block; }
     .hero .btn { margin-top: 26px; }
+    /* The icebreaker: what to expect, what to do, and play it forward (Mr. Parker, Nov 15) */
+    .ice { position: relative; max-width: 460px; margin: 26px auto 0; padding: 22px 22px 18px; text-align: left;
+      border-radius: 24px; border: 2px solid #f6a93273; background: #060e2099; }
+    .ice h2 { margin: 0; text-align: center; color: #fff; font: 800 22px/1.2 Fraunces, Georgia, serif; }
+    .ice ol { list-style: none; margin: 14px 0 0; padding: 0; }
+    .ice li { display: flex; gap: 12px; align-items: flex-start; margin: 10px 0 0; color: var(--on-sky-soft); font-weight: 700; line-height: 1.4; }
+    .ice li b { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--sun); color: var(--ink);
+      display: grid; place-items: center; font-size: 14px; }
+    .ice .lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .ice .lanes .btn { margin: 0; padding: 12px 10px; font: 800 18px/1 Fraunces, Georgia, serif; }
+    .ice .lanes .btn.ghost { background: transparent; color: #fff; border: 2px solid var(--sun); box-shadow: none; }
+    .ice .ask { margin: 18px 0 8px; text-align: center; color: #fff; font-weight: 700; }
+    .play { display: block; margin: 0 auto; border: 0; cursor: pointer; font: inherit; font-weight: 800; }
+    .hero .ice .btn.play { margin-top: 0; }
+    .copied { min-height: 1.3em; margin: 8px 0 0; text-align: center; font-size: 14px; font-weight: 700; color: var(--on-sky-soft); }
+    #contact .copied { color: var(--muted); }
     .badge {
       margin: 22px 0 0; font-size: 12px; font-weight: 800;
       letter-spacing: .18em; text-transform: uppercase; color: var(--sun);
@@ -215,7 +231,7 @@
                alt="The SmartPalate MAÎTRE D', holding a tray with the SmartPalate logo">
         </div>
         <h1>What'cha got a taste for!&trade;</h1>
-        <a class="tagline-link" href="https://app.smartpalate.co/request" aria-label="What'cha got a taste for! Send a request">
+        <a class="tagline-link" href="https://app.smartpalate.co/request?lane=customer" aria-label="What'cha got a taste for! Send a request">
           <span class="tm-wrap"><img class="tagline" src="assets/tagline.png" width="787" height="158" alt=""><span class="tm-art" aria-hidden="true">&trade;</span></span>
           <span class="tap">Tap to tell us</span>
         </a>
@@ -224,6 +240,22 @@
           <p class="lead">We're building SmartPalate right now. We're already listening, and customer launch is still ahead.</p>
           <p>Our vision is <em><i>Viable Provision Emergence (VPE)</i></em> across state lines—connecting what people want with the growers, grocers, restaurants, and delivery partners who can get it to them.</p>
           <p>Requests from all 50 states are welcome. Help shape where we start.</p>
+        </div>
+
+        <div class="ice">
+          <h2>How it works</h2>
+          <ol>
+            <li><b>1</b><span>Pick Customers or Producers.</span></li>
+            <li><b>2</b><span>Tell the Ma&icirc;tre d&rsquo; what you want, or what you&rsquo;ve got.</span></li>
+            <li><b>3</b><span>It&rsquo;s counted. Nothing is sold or promised yet. We use it to know where to start.</span></li>
+          </ol>
+          <div class="lanes">
+            <a class="btn" href="https://app.smartpalate.co/request?lane=customer">Customers</a>
+            <a class="btn ghost" href="https://app.smartpalate.co/request?lane=producer">Producers</a>
+          </div>
+          <p class="ask">Know someone who&rsquo;d want this?</p>
+          <button class="btn play" type="button" data-share>Play it forward</button>
+          <p class="copied" aria-live="polite"></p>
         </div>
 
         <p class="badge">Veteran Owned &amp; Family Operated</p>
@@ -288,6 +320,7 @@
         </div>
         <div class="card">
           <p>We're lining up the people who can bring what folks are asking for. If that's you, we'd love to hear from you.</p>
+          <a class="btn" href="https://app.smartpalate.co/request?lane=producer">Tell us what&rsquo;cha got</a>
           <a class="btn outline" href="mailto:smartpalate@yahoo.com?subject=Partnering%20with%20SmartPalate">Email us</a>
         </div>
       </div>
@@ -298,7 +331,10 @@
         <p class="kicker">Help shape where we start</p>
         <h2>Tell us. We're listening.</h2>
         <p class="intro">Send a request for any food you want, from any of the 50 states. A request isn't an order, and nothing is charged. It tells us where the demand is.</p>
-        <a class="btn slogan-btn" href="https://app.smartpalate.co/request" aria-label="What'cha got a taste for! Send a request"><img src="assets/tagline-button.png" alt="" width="787" height="158"></a>
+        <a class="btn slogan-btn" href="https://app.smartpalate.co/request?lane=customer" aria-label="What'cha got a taste for! Send a request"><img src="assets/tagline-button.png" alt="" width="787" height="158"></a>
+        <p class="reach">Know someone who&rsquo;d want this?</p>
+        <button class="btn outline play" type="button" data-share>Play it forward</button>
+        <p class="copied" aria-live="polite"></p>
         <p class="reach">Questions? Email <a href="mailto:smartpalate@yahoo.com">smartpalate@yahoo.com</a></p>
       </div>
     </section>
@@ -318,6 +354,27 @@
       <p class="credit">Earth imagery: NASA</p>
     </footer>
   </div>
+  <script>
+  // "Play it forward": the phone's share sheet, or copy the link where there isn't one.
+  (function () {
+    var url = "https://smartpalate.co";
+    var text = "SmartPalate™ is coming. Tell the Maître d' what you want, or what you've got:";
+    document.querySelectorAll("[data-share]").forEach(function (btn) {
+      var note = btn.nextElementSibling;
+      btn.addEventListener("click", function () {
+        if (navigator.share) {
+          navigator.share({ title: "SmartPalate", text: text, url: url }).catch(function () {});
+          return;
+        }
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text + " " + url).then(function () {
+            if (note) { note.textContent = "Link copied. Paste it anywhere."; setTimeout(function () { note.textContent = ""; }, 2500); }
+          }).catch(function () {});
+        }
+      });
+    });
+  })();
+  </script>
   <script>
   // Outer space behind the Earth: a deep starfield that twinkles, with faint nebula glow.
   (function () {
