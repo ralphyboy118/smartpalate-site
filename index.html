@@ -356,12 +356,29 @@
   </div>
   <script>
   // "Play it forward": the phone's share sheet, or copy the link where there isn't one.
+  // Counting (Mr. Parker, Nov 15): each tap is counted anonymously, and the shared link carries
+  // ?ref=playitforward, which this page passes on to the app so a request that comes back
+  // through it is counted too. Nothing about who shared, or with whom, is recorded.
   (function () {
-    var url = "https://smartpalate.co";
+    var REF = "playitforward";
+    var url = "https://smartpalate.co/?ref=" + REF;
     var text = "SmartPalate™ is coming. Tell the Maître d' what you want, or what you've got:";
+    var tapUrl = "https://api.smartpalate.co/api/v1/share-taps?surface=website";
+
+    // Pass an arriving ?ref= on to every link into the app.
+    var ref = new URLSearchParams(location.search).get("ref");
+    if (ref && /^[A-Za-z0-9_-]{1,64}$/.test(ref)) {
+      document.querySelectorAll('a[href^="https://app.smartpalate.co/request"]').forEach(function (a) {
+        var u = new URL(a.href);
+        u.searchParams.set("ref", ref);
+        a.href = u.toString();
+      });
+    }
+
     document.querySelectorAll("[data-share]").forEach(function (btn) {
       var note = btn.nextElementSibling;
       btn.addEventListener("click", function () {
+        try { if (!(navigator.sendBeacon && navigator.sendBeacon(tapUrl))) { fetch(tapUrl, { method: "POST", mode: "no-cors", keepalive: true }).catch(function () {}); } } catch (e) {}
         if (navigator.share) {
           navigator.share({ title: "SmartPalate", text: text, url: url }).catch(function () {});
           return;
