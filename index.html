@@ -167,7 +167,11 @@
     .side p + p { margin-top: 8px; }
     .specialties { margin: 8px 0; padding-left: 18px; color: var(--muted); }
     .specialties li { margin: 3px 0; }
-    .specialties b { font: inherit; font-weight: 700; color: var(--ink); }
+    .specialties b, .hl { font: inherit; font-weight: 700; font-style: italic; }
+    /* each word's highlights in its own color (darker shades of sun, blue and green, readable on cream) */
+    .word:nth-child(1) .hl { color: #a85d06; }
+    .word:nth-child(2) .hl, .word:nth-child(2) .specialties b { color: #2a63ad; }
+    .word:nth-child(3) .hl { color: #4a7a1c; }
     .closer { margin-top: 22px; font-weight: 800; color: var(--ink); }
 
     .partners { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
@@ -294,8 +298,8 @@
         <div class="words">
           <div class="word"><b><i>Viable</i></b>
             <div class="sides">
-              <div class="side"><h4>For your table</h4><p>It has to be real and right. Real food from a seller who checks out, lawful where you live, lawful when it crosses state lines, and a price and a trip that make sense. If it doesn&rsquo;t add up, we don&rsquo;t bring it.</p></div>
-              <div class="side"><h4>For your business</h4><p>Your name, your product, your way. We confirm what the law requires for each place you sell, so every order you take is one you can stand behind.</p></div>
+              <div class="side"><h4>For your table</h4><p>It has to be <strong class="hl">real and right</strong>. <strong class="hl">Real food from a seller who checks out</strong>, <strong class="hl">lawful where you live</strong>, <strong class="hl">lawful when it crosses state lines</strong>, and <strong class="hl">a price and a trip that make sense</strong>. If it doesn&rsquo;t add up, we don&rsquo;t bring it.</p></div>
+              <div class="side"><h4>For your business</h4><p><strong class="hl">Your name, your product, your way.</strong> We confirm what the law requires for each place you sell, so <strong class="hl">every order you take is one you can stand behind</strong>.</p></div>
             </div>
           </div>
           <div class="word"><b><i>Provisions</i></b>
@@ -309,13 +313,13 @@
                   <li><b>Boudin, andouille and smoked meats</b> from inspected kitchens</li>
                 </ul>
                 <p>Each comes within what the law allows: some travel anywhere, and some stay close to home.</p></div>
-              <div class="side"><h4>For your business</h4><p>If you grow it, catch it, cook it, stock it, pack it or deliver it, there&rsquo;s a place for you. A shrimper&rsquo;s catch, a grocer&rsquo;s shelf, a restaurant&rsquo;s plate, a smokehouse&rsquo;s sausage: <i>Smart</i>Palate brings you customers who are already asking.</p></div>
+              <div class="side"><h4>For your business</h4><p>If you <strong class="hl">grow it, catch it, cook it, stock it, pack it or deliver it</strong>, there&rsquo;s a place for you. <strong class="hl">A shrimper&rsquo;s catch, a grocer&rsquo;s shelf, a restaurant&rsquo;s plate, a smokehouse&rsquo;s sausage</strong>: <i>Smart</i>Palate brings you <strong class="hl">customers who are already asking</strong>.</p></div>
             </div>
           </div>
           <div class="word"><b><i>Emergence</i></b>
             <div class="sides">
-              <div class="side"><h4>For your table</h4><p>We take your request and bring it together, from everything around you or from anywhere in the US. The more people answer <em>&ldquo;What&rsquo;cha got a taste for!&rdquo;</em>, the more <i>Smart</i>Palate focuses on getting it done, closer to home.</p></div>
-              <div class="side"><h4>For your business</h4><p>Demand comes to you, counted and organized. Many households and kitchens can add up to one order that makes the trip worth it, and you stay the seller.</p></div>
+              <div class="side"><h4>For your table</h4><p>We take your request and <strong class="hl">bring it together</strong>, <strong class="hl">from everything around you or from anywhere in the US</strong>. The more people answer <em class="hl">&ldquo;What&rsquo;cha got a taste for!&rdquo;</em>, the more <i>Smart</i>Palate focuses on <strong class="hl">getting it done, closer to home</strong>.</p></div>
+              <div class="side"><h4>For your business</h4><p><strong class="hl">Demand comes to you, counted and organized.</strong> Many households and kitchens can add up to <strong class="hl">one order that makes the trip worth it</strong>, and <strong class="hl">you stay the seller</strong>.</p></div>
             </div>
           </div>
         </div>
