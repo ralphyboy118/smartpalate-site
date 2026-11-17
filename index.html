@@ -162,6 +162,12 @@
     .word:nth-child(2) b { color: var(--blue); }
     .word:nth-child(3) b { color: var(--green); }
     .word p { margin: 0; color: var(--muted); }
+    .sides { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; }
+    .side h4 { margin: 0 0 6px; font: 800 12px/1.2 Inter, system-ui, sans-serif; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+    .side p + p { margin-top: 8px; }
+    .specialties { margin: 8px 0; padding-left: 18px; color: var(--muted); }
+    .specialties li { margin: 3px 0; }
+    .specialties b { font: inherit; font-weight: 700; color: var(--ink); }
     .closer { margin-top: 22px; font-weight: 800; color: var(--ink); }
 
     .partners { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: center; }
@@ -196,6 +202,7 @@
       .menu { justify-content: center; gap: 2px 16px; }
       .menu a { font-size: 14px; }
       .word { grid-template-columns: 1fr; gap: 4px; }
+      .sides { grid-template-columns: 1fr; }
       section { padding: 48px 0; }
       .brand span { font-size: 22px; }
     }
@@ -282,32 +289,37 @@
       <div class="wrap">
         <p class="kicker">What we mean by VPE</p>
         <h2>Viable Provision Emergence</h2>
-        <p class="intro">It's a big name for a simple idea: you tell us what you want, and we bring a fragmented food world together to find who has it and who can get it to you.</p>
-
-        <div class="steps">
-          <div class="step">
-            <div class="num">1</div>
-            <h3>You tell us what you've got a taste for</h3>
-            <p>Gulf shrimp, fresh crawfish, a cut of meat you can't find, or something from back home.</p>
-          </div>
-          <div class="step">
-            <div class="num">2</div>
-            <h3>We find who has it</h3>
-            <p>A grower, a grocer, a restaurant or a fisherman, even in another state.</p>
-          </div>
-          <div class="step">
-            <div class="num">3</div>
-            <h3>We get it to you</h3>
-            <p>Through a delivery partner or a local pickup.</p>
-          </div>
-        </div>
+        <p class="intro"><strong>Big name. Simple goal: your satisfaction.</strong></p>
 
         <div class="words">
-          <div class="word"><b>Viable</b><p>It has to make sense: the food is real, the seller is legit, and the price and the trip work.</p></div>
-          <div class="word"><b>Provision</b><p>Food and supplies.</p></div>
-          <div class="word"><b>Emergence</b><p>The supply grows out of what people actually ask for, pulled together from the fragmented food industry all around you.</p></div>
+          <div class="word"><b>Viable</b>
+            <div class="sides">
+              <div class="side"><h4>For your table</h4><p>It has to be real and right. Real food from a seller who checks out, lawful where you live, lawful when it crosses state lines, and a price and a trip that make sense. If it doesn&rsquo;t add up, we don&rsquo;t bring it.</p></div>
+              <div class="side"><h4>For your business</h4><p>Your name, your product, your way. We confirm what the law requires for each place you sell, so every order you take is one you can stand behind.</p></div>
+            </div>
+          </div>
+          <div class="word"><b>Provisions</b>
+            <div class="sides">
+              <div class="side"><h4>For your table</h4><p>Everything that feeds you: fresh catch, meats, produce, groceries, a simple prepared meal from a kitchen near you, at your door or ready for pickup. And the specialties you can&rsquo;t find where you live:</p>
+                <ul class="specialties">
+                  <li><b>Authentic seasonings and spice blends</b>, the real Cajun and Creole kind</li>
+                  <li><b>Small-batch hot sauces, dark roux, fil&eacute; and cane syrup</b></li>
+                  <li><b>Coffee and chicory, pralines, mayhaw and fig preserves</b></li>
+                  <li><b>Louisiana rice, pecans and local honey</b></li>
+                  <li><b>Boudin, andouille and smoked meats</b> from inspected kitchens</li>
+                </ul>
+                <p>Each comes within what the law allows: some travel anywhere, and some stay close to home.</p></div>
+              <div class="side"><h4>For your business</h4><p>If you grow it, catch it, cook it, stock it, pack it or deliver it, there&rsquo;s a place for you. A shrimper&rsquo;s catch, a grocer&rsquo;s shelf, a restaurant&rsquo;s plate, a smokehouse&rsquo;s sausage: SmartPalate brings you customers who are already asking.</p></div>
+            </div>
+          </div>
+          <div class="word"><b>Emergence</b>
+            <div class="sides">
+              <div class="side"><h4>For your table</h4><p>We take your request and bring it together, from everything around you or from anywhere in the US. The more people answer <em>&ldquo;What&rsquo;cha got a taste for!&rdquo;</em>, the more SmartPalate focuses on getting it done, closer to home.</p></div>
+              <div class="side"><h4>For your business</h4><p>Demand comes to you, counted and organized. Many households and kitchens can add up to one order that makes the trip worth it, and you stay the seller.</p></div>
+            </div>
+          </div>
         </div>
-        <p class="closer">The more people ask for something, the sooner we can bring it.</p>
+        <p class="closer"><em>Your own personal food network, pieced together for you. That&rsquo;s VPE.</em></p>
       </div>
     </section>
 
