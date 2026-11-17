@@ -117,6 +117,21 @@
     .ice .lanes .btn.lane:hover .who, .ice .lanes .btn.lane:focus-visible .who { opacity: 1; }
     /* room under the buttons for that label, so it never covers "Know someone who'd want this?" */
     .ice .lanes + .ask { margin-top: 52px; }
+    /* Nov 17, spacing (a friend's feedback): room between paragraphs in the About card */
+    .about .card p + p { margin-top: 12px; }
+    @media (max-width: 520px) {
+      /* the slogan buttons stack on phones so the slogans are big enough to read */
+      .hero .ice div.lanes { grid-template-columns: 1fr; gap: 14px; }
+      .hero .ice div.lanes .btn.lane { min-height: 62px; }
+      .hero .ice div.lanes .btn.lane img { width: 82%; }
+      .hero .ice div.lanes .btn.lane img.short { width: 52%; }
+      .hero .ice div.lanes + .ask { margin-top: 48px; }
+      /* less empty sky between the menu and the Earth */
+      .hero .figure.sky-space { width: 46vw; margin-top: 0; margin-bottom: 22px; }
+      /* a little air under each VPE word */
+      .word { gap: 8px; }
+      .word b { margin-bottom: 2px; }
+    }
     .btn.tellem { display: block; margin-left: auto; margin-right: auto; text-align: center; font-size: 19px; font-weight: 900; letter-spacing: -.01em; }
     .hero .tagline { width: min(460px, 86vw); height: auto; display: block; margin: 6px auto 0; }
     .hero h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -302,10 +317,11 @@
         <div>
           <p class="kicker">About Us</p>
           <h2>Veteran Owned &amp; <i>Family Operated</i>.</h2>
-          <p class="intro"><i>Smart</i>Palate is a family business started by a veteran who spent his career in logistics, the work of getting the right supplies to the right people at the right time.</p>
+          <p class="intro"><i>Smart</i>Palate is a family business started by a veteran who spent his career in logistics, the work of getting the right supplies to the right people at the right time, and built it after he retired.</p>
         </div>
         <div class="card">
           <p>Good food is out there: growers, fishermen, grocers and kitchens, scattered all over. What's missing is the connection. <i>Smart</i>Palate is built to make that connection, <span class="stamp-line">starting with <img class="inline-slogan" src="assets/tagline-stamp.png" alt="what'cha got a taste for!" width="835" height="206"></span></p>
+          <p>We don&rsquo;t run a store or stock warehouses. The producers stay the sellers; we&rsquo;re the matchmaker who checks them out, handles the order and coordinates the delivery. Think of us as the Ma&icirc;tre d&rsquo; for food everywhere you are: you tell him what you&rsquo;re craving, and he knows exactly who to connect.</p>
           <p class="sign">— The <i>Smart</i>Palate family</p>
         </div>
       </div>
@@ -315,7 +331,7 @@
       <div class="wrap">
         <p class="kicker">What we mean by VPE</p>
         <h2><i>Viable Provisions Emergence</i></h2>
-        <p class="intro"><strong>Big name. Simple goal: your satisfaction.</strong></p>
+        <p class="intro"><strong>Big name. Simple goal: your satisfaction.</strong> It&rsquo;s when we pull together the fragmented food sources around you.</p>
 
         <div class="words">
           <div class="word"><b><i>Viable</i></b>
@@ -326,7 +342,7 @@
           </div>
           <div class="word"><b><i>Provisions</i></b>
             <div class="sides">
-              <div class="side"><h4>For your table</h4><p>Everything that feeds you: fresh catch, meats, produce, groceries, a simple prepared meal from a kitchen near you, at your door or ready for pickup. And the specialties you can&rsquo;t find where you live:</p>
+              <div class="side"><h4>For your table</h4><p>Everything that feeds you: fresh catch, meats, produce, groceries, a simple prepared meal from a kitchen near you, even from a restaurant when you&rsquo;re out and about or in a new area, at your door or ready for pickup. And the specialties you can&rsquo;t find where you live:</p>
                 <ul class="specialties">
                   <li><b>Authentic seasonings and spice blends</b>, the real Cajun and Creole kind</li>
                   <li><b>Small-batch hot sauces, dark roux, fil&eacute; and cane syrup</b></li>
