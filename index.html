@@ -274,7 +274,7 @@
         </div>
         <p class="sp-name">Smart<span>Palate</span></p>
         <h1>What'cha got a taste for!&trade;</h1>
-        <a class="tagline-link" href="https://app.smartpalate.co/request?lane=customer" aria-label="What'cha got a taste for! Send a request">
+        <a class="tagline-link" href="https://app.smartpalate.co/request?lane=customer&ref=site" aria-label="What'cha got a taste for! Send a request">
           <span class="tm-wrap"><img class="tagline" src="assets/tagline.png" width="787" height="158" alt=""><span class="tm-art" aria-hidden="true">&trade;</span></span>
           <span class="tap">Tap to tell us</span>
         </a>
@@ -294,10 +294,10 @@
           </ol>
           <div class="lanes">
             <!-- each button shows its lane's slogan; the pointer resting on it shows who it's for (Nov 17) -->
-            <a class="btn ghost lane" href="https://app.smartpalate.co/request?lane=customer" aria-label="Customers">
+            <a class="btn ghost lane" href="https://app.smartpalate.co/request?lane=customer&ref=site" aria-label="Customers">
               <img src="assets/tagline.png" alt="" width="787" height="158"><span class="who" aria-hidden="true">Customers</span>
             </a>
-            <a class="btn ghost lane" href="https://app.smartpalate.co/request?lane=producer" aria-label="Producers">
+            <a class="btn ghost lane" href="https://app.smartpalate.co/request?lane=producer&ref=site" aria-label="Producers">
               <img class="short" src="assets/tagline-producer.png" alt="" width="480" height="158"><span class="who" aria-hidden="true">Producers</span>
             </a>
           </div>
@@ -371,7 +371,7 @@
           <p class="kicker">Growers, grocers, restaurants &amp; delivery partners</p>
           <h2>Let producers, produce!<sup class="tm">&trade;</sup></h2>
           <p class="intro">You keep doing what you do best. You stay the seller, and <i>Smart</i>Palate connects you with the people asking for what you have.</p>
-          <a class="btn producer-btn" href="https://app.smartpalate.co/request?lane=producer">Tell us what&rsquo;cha got</a>
+          <a class="btn producer-btn" href="https://app.smartpalate.co/request?lane=producer&ref=site">Tell us what&rsquo;cha got</a>
         </div>
         <div class="card">
           <p>We're lining up the people who can bring what folks are asking for. If that's you, we'd love to hear from you.</p>
@@ -385,7 +385,7 @@
         <p class="kicker">Help shape where we start</p>
         <h2>Tell us. <i>We're listening</i>.</h2>
         <p class="intro">Send a request for any food you want, from any of the 50 states. A request isn't an order, and nothing is charged. It tells us where the demand is.</p>
-        <a class="btn slogan-btn" href="https://app.smartpalate.co/request?lane=customer" aria-label="What'cha got a taste for! Send a request"><img src="assets/tagline-button.png" alt="" width="787" height="158"></a>
+        <a class="btn slogan-btn" href="https://app.smartpalate.co/request?lane=customer&ref=site" aria-label="What'cha got a taste for! Send a request"><img src="assets/tagline-button.png" alt="" width="787" height="158"></a>
         <p class="reach">Know someone who&rsquo;d want this?</p>
         <button class="btn outline play tellem" type="button" data-share>Tell&rsquo;em</button>
         <p class="copied" aria-live="polite"></p>
@@ -425,7 +425,7 @@
     // Pass an arriving ?ref= on to every link into the app.
     var ref = new URLSearchParams(location.search).get("ref");
     if (ref && /^[A-Za-z0-9_-]{1,64}$/.test(ref)) {
-      document.querySelectorAll('a[href^="https://app.smartpalate.co/request"]').forEach(function (a) {
+      document.querySelectorAll('a[href^="https://app.smartpalate.co/request?ref=site"]').forEach(function (a) {
         var u = new URL(a.href);
         u.searchParams.set("ref", ref);
         a.href = u.toString();
