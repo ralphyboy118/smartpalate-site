@@ -422,10 +422,10 @@
     var text = "SmartPalate™ is coming. Tell the Maître d' what you want, or what you've got:";
     var tapUrl = "https://api.smartpalate.co/api/v1/share-taps?surface=website";
 
-    // Pass an arriving ?ref= on to every link into the app.
+    // Pass an arriving ?ref= on to every link into the app (it replaces the default ref=site).
     var ref = new URLSearchParams(location.search).get("ref");
     if (ref && /^[A-Za-z0-9_-]{1,64}$/.test(ref)) {
-      document.querySelectorAll('a[href^="https://app.smartpalate.co/request?ref=site"]').forEach(function (a) {
+      document.querySelectorAll('a[href^="https://app.smartpalate.co/request"]').forEach(function (a) {
         var u = new URL(a.href);
         u.searchParams.set("ref", ref);
         a.href = u.toString();
